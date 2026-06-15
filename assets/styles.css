@@ -770,7 +770,7 @@ h1 {
   }
 
   .brand {
-    display: none;
+    min-width: 0;
   }
 
   .nav a:not(.button) {
@@ -781,6 +781,10 @@ h1 {
     min-height: 44px;
     padding: 0 13px;
     font-size: 12px;
+  }
+
+  .footer .brand {
+    display: none;
   }
 
   h1 {
