@@ -1,562 +1,343 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redmoor Consulting | AI Knowledge Systems</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Redmoor Consulting helps growing businesses improve digital efficiency, build enterprise software and unlock practical AI."
+    />
+    <title>Redmoor Consulting | Digital Efficiency, Software &amp; AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page">
-      <header class="shell topbar">
-        <img
-          class="brand"
-          src="assets/logo.png"
-          alt="Redmoor Consulting logo"
-        />
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="button" href="#booking">Book a Discovery Call</a>
-        </nav>
-      </header>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Redmoor Consulting home">
+          <img
+            class="brand-logo"
+            src="assets/logo-light.png"
+            alt="Redmoor Consulting"
+          />
+        </a>
+        <a class="btn btn-primary header-cta" href="#contact"
+          >Book a Discovery Call</a
+        >
+      </div>
+    </header>
 
-      <main>
-        <section class="shell hero" id="services">
-          <div>
-            <h1>AI Knowledge Systems for Growing Businesses</h1>
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">Digital transformation, made practical</p>
+            <h1>
+              Digital efficiency.<br />Better software.<br />Smarter with
+              <span>AI.</span>
+            </h1>
             <p class="hero-copy">
-              Turn company documents, procedures and expertise into a searchable
-              AI assistant your team can trust.
+              We help growing businesses streamline operations, build powerful
+              software and unlock the value of AI — turning complexity into
+              measurable results.
             </p>
-            <div class="hero-actions">
-              <a class="button secondary" href="#booking">
-                <svg
-                  class="icon-sm"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="4" width="18" height="18" rx="2" />
-                  <path d="M16 2v4M8 2v4M3 10h18M8 14h3v3H8z" />
-                </svg>
-                Book a Discovery Call
-              </a>
-            </div>
-          </div>
-
-          <div class="visual" aria-label="AI assistant preview">
-            <div class="visual-glow"></div>
-            <div class="dot-grid"></div>
-            <div class="floating-file pdf">
-              <div class="paper-lines">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <b>PDF</b>
-            </div>
-            <div class="floating-file doc">
-              <div class="paper-lines">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <b>W</b>
-            </div>
-            <div class="floating-file xls">
-              <div class="paper-lines">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <b>X</b>
-            </div>
-            <div class="assistant-card">
-              <div class="question">How do we onboard a new customer?</div>
-              <div class="assistant-title">
-                <span class="sparkle" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M12 2l2.2 6.2L20 10.5l-5.8 2.3L12 19l-2.2-6.2L4 10.5l5.8-2.3L12 2z"
-                    />
-                  </svg>
-                </span>
-                AI Assistant
-              </div>
-              <p class="assistant-body">
-                According to the Customer Onboarding Procedure v3.2, the
-                onboarding process includes the following key steps...
-              </p>
-              <div class="sources-title">Sources</div>
-              <ul class="source-list">
-                <li>
-                  <span class="file-icon">PDF</span>
-                  Customer_Onboarding_Procedure_v3.2.pdf
-                </li>
-                <li>
-                  <span class="file-icon word">W</span> Sales_Process_Guide.docx
-                </li>
-                <li><span class="file-icon">PDF</span> Product_Manual.pdf</li>
-              </ul>
-              <div class="search-box">
-                <span>Ask a follow-up question...</span>
-                <span class="send" aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"
-                    />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="shell compare" id="how">
-          <article class="panel problem">
-            <div class="panel-title">
-              <span class="status-icon">!</span> The Problems
-            </div>
-            <ul class="item-list">
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  ><h3>Information is scattered</h3>
-                  <p>
-                    Documents live in drives, emails and systems - hard to find
-                    and easy to miss.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  ><h3>Teams waste time asking</h3>
-                  <p>
-                    Employees interrupt colleagues or search for answers that
-                    already exist.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 7v6l4 2" /></svg
-                ></span>
-                <span
-                  ><h3>Inconsistent answers</h3>
-                  <p>
-                    Different people give different answers, leading to mistakes
-                    and rework.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  ><h3>Knowledge leaves with people</h3>
-                  <p>
-                    When experienced staff leave, valuable know-how walks out
-                    the door.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
-                    />
-                  </svg>
-                </span>
-                <span
-                  ><h3>Risk and compliance gaps</h3>
-                  <p>
-                    Critical procedures aren't followed, and information isn't
-                    always up to date.
-                  </p></span
-                >
-              </li>
-            </ul>
-          </article>
-
-          <article class="panel solution">
-            <div class="panel-title">
-              <span class="status-icon">✓</span> Our Solution
-            </div>
-            <ul class="item-list">
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
-                    />
-                  </svg>
-                </span>
-                <span
-                  ><h3>Ask questions, get answers</h3>
-                  <p>
-                    Your team can ask in natural language and get clear, instant
-                    answers.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                    <path
-                      d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"
-                    /></svg
-                ></span>
-                <span
-                  ><h3>Answers backed by sources</h3>
-                  <p>
-                    Every response is linked to the original documents you
-                    trust.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="m13 2-9 13h8l-1 7 9-13h-8z" /></svg
-                ></span>
-                <span
-                  ><h3>Instant knowledge retrieval</h3>
-                  <p>
-                    Find the right information across all your documents in
-                    seconds.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="M9 12l2 2 4-4" /></svg
-                ></span>
-                <span
-                  ><h3>Secure and private</h3>
-                  <p>
-                    Your data stays private with role-based access and
-                    enterprise-grade security.
-                  </p></span
-                >
-              </li>
-              <li class="info-item">
-                <span class="tile-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="m8 12 3 3 5-6" /></svg
-                ></span>
-                <span
-                  ><h3>Always up to date</h3>
-                  <p>
-                    New or updated documents are indexed so your assistant stays
-                    current.
-                  </p></span
-                >
-              </li>
-            </ul>
-          </article>
-        </section>
-
-        <section class="use-cases" id="about">
-          <div class="shell">
-            <p class="eyebrow">Example Use Cases</p>
-            <h2 class="section-title">Where It Delivers Value</h2>
-            <div class="case-grid">
-              <article class="case-card">
-                <span class="case-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M3 21h18M5 21V9h4v12M10 21V5h4v16M15 21v-8h4v8" />
-                    <path
-                      d="M7 12h.01M7 15h.01M7 18h.01M12 8h.01M12 11h.01M12 14h.01M17 16h.01M17 19h.01"
-                    /></svg
-                ></span>
-                <h3>Manufacturing</h3>
-                <p>
-                  Access SOPs, work instructions and technical documentation
-                  instantly on the shop floor or in the office.
-                </p>
-              </article>
-              <article class="case-card">
-                <span class="case-icon" aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
-                    />
-                  </svg>
-                </span>
-                <h3>Professional Services</h3>
-                <p>
-                  Find policies, templates and client guidance fast and deliver
-                  consistent high-quality work.
-                </p>
-              </article>
-              <article class="case-card">
-                <span class="case-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="m22 10-10-5-10 5 10 5 10-5z" />
-                    <path d="M6 12v5c3 2 9 2 12 0v-5" /></svg
-                ></span>
-                <h3>HR &amp; People Teams</h3>
-                <p>
-                  Answer questions on policies, onboarding, benefits and
-                  performance with confidence.
-                </p>
-              </article>
-              <article class="case-card">
-                <span class="case-icon" aria-hidden="true"
-                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M3 3v18h18" />
-                    <path d="m7 15 4-4 3 3 5-7" />
-                    <path d="M14 7h5v5" /></svg
-                ></span>
-                <h3>Sales &amp; Customer Success</h3>
-                <p>
-                  Get product, process and pricing information quickly to
-                  respond faster and win more business.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="shell cta" id="booking">
-          <div class="cta-band">
-            <div>
-              <p class="cta-kicker">Book a Discovery Call</p>
-              <h2>Let's unlock the value in your company knowledge.</h2>
-              <p>
-                We'll learn about your challenges and show you how an AI
-                knowledge system can save time, reduce risk and help your team
-                perform better.
-              </p>
-              <div class="proofs">
-                <span
-                  ><svg
-                    class="icon-sm"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="m9 12 2 2 4-4" /></svg
-                  >No obligation</span
-                >
-                <span
-                  ><svg
-                    class="icon-sm"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 7v5l3 2" />
-                    <path d="M9 2h6" /></svg
-                  >30 minutes</span
-                >
-                <span
-                  ><svg
-                    class="icon-sm"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path d="M9 18h6" />
-                    <path d="M10 22h4" />
-                    <path d="M15.1 14a7 7 0 1 0-6.2 0" /></svg
-                  >Practical advice</span
-                >
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div class="booking">
-              <span class="booking-icon" aria-hidden="true"
-                ><svg
-                  width="36"
-                  height="36"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <rect x="3" y="4" width="18" height="18" rx="2" />
-                  <path d="M16 2v4M8 2v4M3 10h18M8 14h3v3H8z" /></svg
-              ></span>
-              <h3>Book a free discovery call</h3>
-              <p>Choose a time that works for you.</p>
-              <a
-                class="button light"
-                target="_blank"
-                href="https://calendly.com/yaroslav-salmin-redmoorconsulting/30min"
+            <div class="button-group">
+              <a class="btn btn-primary" href="#contact"
+                >Book a Discovery Call</a
               >
-                <svg
-                  class="icon-sm"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="4" width="18" height="18" rx="2" />
-                  <path d="M16 2v4M8 2v4M3 10h18M8 14h3v3H8z" />
-                </svg>
-                Book a Discovery Call
-              </a>
+            </div>
+            <div class="trusted">
+              <span>Trusted experience with</span>
+              <div class="client-logos" aria-label="Client experience">
+                <img src="assets/jci-logo.png" alt="JCI" />
+                <img src="assets/lloyds-bank-logo.png" alt="Lloyds Bank" />
+                <img src="assets/morrisons-logo.png" alt="Morrisons" />
+                <img src="assets/santander-logo.png" alt="Santander" />
+                <img src="assets/vw-logo.png" alt="Volkswagen" />
+              </div>
             </div>
           </div>
-        </section>
-      </main>
+          <div class="hero-visual">
+            <article class="metric-card metric-one">
+              <span class="metric-icon"
+                ><i class="fa-solid fa-chart-line" aria-hidden="true"></i
+              ></span>
+              <div>
+                <small>Workflows</small><strong>35% more efficient</strong>
+              </div>
+            </article>
+            <article class="metric-card metric-two">
+              <span class="metric-icon"
+                ><i class="fa-solid fa-circle-check" aria-hidden="true"></i
+              ></span>
+              <div>
+                <small>Process Automation</small
+                ><strong>120+ hours saved</strong>
+              </div>
+            </article>
+            <article class="metric-card metric-three">
+              <span class="metric-icon"
+                ><i class="fa-solid fa-chart-column" aria-hidden="true"></i
+              ></span>
+              <div>
+                <small>AI Insights</small><strong>Better decisions</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-      <footer class="shell footer">
-        <img
-          class="brand"
-          src="assets/logo.png"
-          alt="Redmoor Consulting logo"
-        />
-        <p>
-          AI knowledge systems that help your business find, trust and use its
-          knowledge.
-        </p>
-        <ul class="contact">
-          <li>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
+      <section class="benefits section" aria-labelledby="benefits-title">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">What we deliver</p>
+            <h2 class="section-heading" id="benefits-title">
+              Helping businesses work better
+            </h2>
+            <p>
+              We combine process insight, software engineering and AI to remove
+              friction, automate workflows and build systems that scale with
+              you.
+            </p>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-item">
+              <span class="icon-circle"
+                ><i class="fa-regular fa-clock" aria-hidden="true"></i
+              ></span>
+              <div>
+                <h3>Save time</h3>
+                <p>Eliminate manual work and repetitive tasks.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <span class="icon-circle"
+                ><i class="fa-solid fa-chart-line" aria-hidden="true"></i
+              ></span>
+              <div>
+                <h3>Increase productivity</h3>
+                <p>Empower your team with better tools and systems.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <span class="icon-circle"
+                ><i class="fa-solid fa-shield-halved" aria-hidden="true"></i
+              ></span>
+              <div>
+                <h3>Reduce risk</h3>
+                <p>Improve data accuracy, compliance and visibility.</p>
+              </div>
+            </article>
+            <article class="benefit-item">
+              <span class="icon-circle"
+                ><i class="fa-solid fa-sterling-sign" aria-hidden="true"></i
+              ></span>
+              <div>
+                <h3>Drive growth</h3>
+                <p>Make smarter decisions with reliable insights.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="case-studies section"
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div class="container">
+          <div class="dark-heading">
+            <p class="eyebrow">How we can help</p>
+            <h2 class="section-heading" id="services-title">Our Services</h2>
+          </div>
+          <div class="case-grid">
+            <article class="case-item">
+              <span class="icon-circle"
+                ><i class="fa-solid fa-gears" aria-hidden="true"></i
+              ></span>
+              <h3>Digital Efficiency</h3>
+              <p>
+                We analyse your processes, identify inefficiencies and implement
+                practical solutions.
+              </p>
+              <ul class="check-list">
+                <li>Process review &amp; mapping</li>
+                <li>Workflow automation</li>
+                <li>System integration</li>
+              </ul>
+            </article>
+            <article class="case-item">
+              <span class="icon-circle"
+                ><i class="fa-regular fa-code" aria-hidden="true"></i
+              ></span>
+              <h3>Enterprise Software Development</h3>
+              <p>
+                Custom software built to solve real business problems and
+                support your growth.
+              </p>
+              <ul class="check-list">
+                <li>Web &amp; cloud applications</li>
+                <li>System modernisation</li>
+                <li>Scalable architecture</li>
+              </ul>
+            </article>
+            <article class="case-item">
+              <span class="icon-circle"
+                ><i
+                  class="fa-solid fa-wand-magic-sparkles"
+                  aria-hidden="true"
+                ></i
+              ></span>
+              <h3>AI Solutions</h3>
+              <p>
+                We turn your data into intelligence with secure, practical AI
+                solutions that deliver results.
+              </p>
+              <ul class="check-list">
+                <li>AI strategy &amp; consulting</li>
+                <li>Internal AI tools &amp; copilots</li>
+                <li>RAG &amp; knowledge systems</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="why section" id="about" aria-labelledby="why-title">
+        <div class="container why-grid">
+          <div class="why-content">
+            <p class="eyebrow">The Redmoor difference</p>
+            <h2 class="section-heading" id="why-title">
+              Why work with Redmoor Consulting?
+            </h2>
+            <ul class="why-list">
+              <li>
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i
+                ><span
+                  ><strong>Business-first approach</strong> — we solve real
+                  problems</span
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i
+                ><span
+                  >End-to-end delivery from strategy to implementation</span
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i
+                ><span>Practical AI that delivers measurable value</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i
+                ><span>Local, independent and easy to work with</span>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="image-placeholder dashboard-image"
+            role="img"
+            aria-label="Software analytics dashboard image"
+          ></div>
+        </div>
+      </section>
+
+      <section
+        class="cta-section section"
+        id="contact"
+        aria-labelledby="cta-title"
+      >
+        <div class="container">
+          <div class="cta-panel">
+            <p class="eyebrow">Start a conversation</p>
+            <h2 class="section-heading" id="cta-title">
+              Ready to transform how your business works?
+            </h2>
+            <p>
+              Let’s discuss how we can help you save time, reduce costs and grow
+              with confidence.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://calendly.com/yaroslav-salmin-redmoorconsulting/30min"
+              >Book a Discovery Call</a
             >
-              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z" />
-              <circle cx="12" cy="10" r="3" /></svg
-            >Warwickshire, UK
-          </li>
-          <li>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-              <path d="m3 7 9 6 9-6" /></svg
-            ><a href="mailto:hello@redmoorconsulting.co.uk"
-              >hello@redmoorconsulting.co.uk</a
-            >
-          </li>
-          <li>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path
-                d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"
-              /></svg
-            ><a href="https://redmoorconsulting.co.uk"
-              >redmoorconsulting.co.uk</a
-            >
-          </li>
-        </ul>
-      </footer>
-    </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <!-- <div class="footer-grid">
+          <div class="footer-brand">
+            <a
+              class="brand brand-light"
+              href="#home"
+              aria-label="Redmoor Consulting home"
+              ><img
+                class="brand-logo"
+                src="assets/logo-dark.png"
+                alt="Redmoor Consulting"
+            /></a>
+            <p>
+              Helping businesses achieve digital efficiency, build better
+              software and unlock the power of AI.
+            </p>
+          </div>
+          <div>
+            <h2>Services</h2>
+            <ul>
+              <li><a href="#services">Digital Efficiency</a></li>
+              <li><a href="#services">Enterprise Software Development</a></li>
+              <li><a href="#services">AI Solutions</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Company</h2>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#case-studies">Case Studies</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Connect</h2>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:hello@redmoorconsulting.co.uk"
+                  ><i class="fa-regular fa-envelope" aria-hidden="true"></i
+                  ><span>hello@redmoorconsulting.co.uk</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/yaroslavsalmin"
+                  aria-label="Redmoor Consulting on LinkedIn"
+                  ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+                  ><span>LinkedIn</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div> -->
+        <div class="footer-bottom">
+          <p>© 2026 Redmoor Consulting Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
