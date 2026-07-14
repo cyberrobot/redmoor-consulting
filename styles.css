@@ -266,6 +266,7 @@ a:focus-visible {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 .client-logos {
   display: flex;
@@ -372,75 +373,8 @@ a:focus-visible {
   line-height: 1.6;
 }
 
-/* Services */
-.services {
-  background: var(--white);
-}
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.card {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--ivory);
-  box-shadow: var(--shadow-soft);
-}
-.service-card {
-  display: flex;
-  min-height: 440px;
-  flex-direction: column;
-  padding: clamp(1.7rem, 3vw, 2.4rem);
-}
-.service-card .icon-circle {
-  margin-bottom: 1.7rem;
-}
-.service-card h3 {
-  min-height: 3.2rem;
-  font-family: var(--font-heading);
-  font-size: 1.65rem;
-}
-.service-card > p {
-  margin-bottom: 1.25rem;
-  font-size: 0.83rem;
-}
-.check-list {
-  margin-bottom: 2rem;
-}
-.check-list li {
-  position: relative;
-  margin-bottom: 0.55rem;
-  padding-left: 1.25rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.78rem;
-}
-.check-list li::before {
-  position: absolute;
-  left: 0;
-  color: var(--sage);
-  content: '✓';
-  font-weight: 700;
-}
-.text-link {
-  margin-top: auto;
-  color: var(--forest);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-.text-link span,
-.case-item a span {
-  display: inline-block;
-  margin-left: 0.25rem;
-  transition: transform 0.2s ease;
-}
-.text-link:hover span,
-.case-item a:hover span {
-  transform: translateX(4px);
-}
-
 /* Case studies */
-.case-studies {
+.services {
   background: var(--forest);
   color: var(--white);
 }
@@ -454,37 +388,37 @@ a:focus-visible {
 .dark-heading .section-heading {
   color: var(--white);
 }
-.case-grid {
+.service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.case-item {
+.service-item {
   min-height: 300px;
   padding: 0.5rem clamp(2rem, 4vw, 3.5rem);
   border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
-.case-item:first-child {
+.service-item:first-child {
   padding-left: 0.5rem;
 }
-.case-item:last-child {
+.service-item:last-child {
   padding-right: 0.5rem;
   border-right: 0;
 }
-.case-item .icon-circle {
+.service-item .icon-circle {
   margin-bottom: 1.6rem;
   background: rgba(169, 171, 145, 0.28);
   color: var(--white);
 }
-.case-item h3 {
+.service-item h3 {
   font-family: var(--font-heading);
   font-size: 1.6rem;
 }
-.case-item p {
+.service-item p {
   min-height: 60px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.82rem;
 }
-.case-item a {
+.service-item a {
   color: var(--white);
   font-size: 0.75rem;
   font-weight: 700;
@@ -711,21 +645,24 @@ a:focus-visible {
   .service-card h3 {
     min-height: 0;
   }
-  .case-grid {
+  .service-grid {
     grid-template-columns: 1fr;
   }
-  .case-item,
-  .case-item:first-child,
-  .case-item:last-child {
+  .service-item,
+  .service-item:first-child,
+  .service-item:last-child {
     min-height: 0;
     padding: 2rem 0;
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   }
-  .case-item:last-child {
+  .service-item:first-child {
+    padding-top: 0;
+  }
+  .service-item:last-child {
     border-bottom: 0;
   }
-  .case-item p {
+  .service-item p {
     min-height: 0;
   }
   .why {
@@ -754,7 +691,7 @@ a:focus-visible {
 }
 @media (max-width: 520px) {
   h1 {
-    font-size: clamp(3rem, 14vw, 4rem);
+    font-size: clamp(3rem, 14vw, 3.5rem);
   }
   .site-header {
     position: static;
@@ -766,8 +703,7 @@ a:focus-visible {
     width: 165px;
   }
   .header-cta {
-    width: 100%;
-    order: 4;
+    display: none;
   }
   .main-nav {
     order: 3;
@@ -792,8 +728,8 @@ a:focus-visible {
     gap: 1rem 1.2rem;
   }
   .client-logos img {
-    height: 24px;
-    max-width: 84px;
+    height: 40px;
+    max-width: 100px;
   }
   .client-logos img:last-child {
     width: 30px;
