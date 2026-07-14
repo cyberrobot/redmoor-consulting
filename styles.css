@@ -320,11 +320,11 @@ a:focus-visible {
 .metric-card small {
   margin-bottom: 0.15rem;
   color: var(--text-muted);
-  font-size: 0.61rem;
+  font-size: 0.75rem;
 }
 .metric-card strong {
   color: var(--text);
-  font-size: 0.77rem;
+  font-size: 0.8rem;
 }
 .metric-icon {
   display: grid;
