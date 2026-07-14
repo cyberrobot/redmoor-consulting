@@ -365,11 +365,9 @@ a:focus-visible {
 }
 .benefit-item h3 {
   margin: 0.1rem 0 0.35rem;
-  font-size: 0.96rem;
 }
 .benefit-item p {
   margin: 0;
-  font-size: 0.78rem;
   line-height: 1.6;
 }
 
@@ -416,11 +414,27 @@ a:focus-visible {
 .service-item p {
   min-height: 60px;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.82rem;
+  /* font-size: 0.82rem; */
 }
 .service-item a {
   color: var(--white);
   font-size: 0.75rem;
+  font-weight: 700;
+}
+.check-list {
+  margin-bottom: 2rem;
+}
+.check-list li {
+  position: relative;
+  margin-bottom: 0.55rem;
+  padding-left: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.check-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--sage);
+  content: '✓';
   font-weight: 700;
 }
 
@@ -449,7 +463,6 @@ a:focus-visible {
   gap: 0.8rem;
   margin-bottom: 1rem;
   color: var(--text-muted);
-  font-size: 0.86rem;
 }
 .why-list i {
   margin-top: 0.3rem;
@@ -539,7 +552,7 @@ a:focus-visible {
 .footer-bottom p {
   margin: 0;
   color: rgba(255, 255, 255, 0.48);
-  font-size: 0.68rem;
+  font-size: 0.875rem;
 }
 
 /* Responsive styles */
