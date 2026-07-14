@@ -825,10 +825,6 @@ a:focus-visible {
   .benefit-grid {
     grid-template-columns: 1fr;
   }
-  .benefit-item {
-    max-width: 340px;
-    margin-inline: auto;
-  }
   .dashboard-image {
     min-height: 260px;
   }
