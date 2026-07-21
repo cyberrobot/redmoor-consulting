@@ -187,14 +187,11 @@ a:focus-visible {
   flex: 0 0 auto;
   align-items: center;
   gap: 0.65rem;
-  color: var(--forest);
 }
 .brand-logo {
   display: block;
   width: 190px;
   height: auto;
-  filter: brightness(0) saturate(100%) invert(20%) sepia(21%) saturate(1067%)
-    hue-rotate(105deg) brightness(87%) contrast(94%);
 }
 .main-nav {
   display: flex;
@@ -490,21 +487,15 @@ a:focus-visible {
 
 /* Footer */
 .site-footer {
-  /* padding-top: 4.5rem; */
+  padding-top: 4.5rem;
   background: var(--forest-dark);
   color: var(--white);
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.55fr 0.8fr 0.7fr 1.25fr;
+  grid-template-columns: 1.55fr 0.8fr 0.8fr 0.7fr;
   gap: 3rem;
   padding-bottom: 3.7rem;
-}
-.brand-light {
-  color: var(--white);
-}
-.brand-light .brand-logo {
-  filter: none;
 }
 .footer-brand p {
   max-width: 300px;
