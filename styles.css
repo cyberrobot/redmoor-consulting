@@ -550,7 +550,7 @@ a:focus-visible {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.55fr 0.8fr 0.8fr 0.7fr;
+  grid-template-columns: 1.55fr 0.8fr 0.8fr;
   gap: 3rem;
   padding-bottom: 3.7rem;
 }
