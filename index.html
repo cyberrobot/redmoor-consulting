@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ZBN5HMKMJZ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-ZBN5HMKMJZ');
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -35,7 +21,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles.css?v=20260721" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.css"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260721-2" />
   </head>
   <body>
     <header class="site-header">
@@ -349,8 +339,19 @@
         </div>
         <div class="footer-bottom">
           <p>© 2026 Redmoor Consulting Ltd. All rights reserved.</p>
+          <button
+            class="cookie-settings-link"
+            type="button"
+          >
+            Cookie settings
+          </button>
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.umd.js"
+    ></script>
+    <script defer src="cookie-consent.js?v=20260721-2"></script>
   </body>
 </html>
