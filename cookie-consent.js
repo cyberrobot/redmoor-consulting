@@ -1,30 +1,10 @@
-const GOOGLE_ANALYTICS_ID = 'G-ZBN5HMKMJZ';
-let analyticsLoaded = false;
-
 function enableGoogleAnalytics() {
-  if (analyticsLoaded) return;
-
-  analyticsLoaded = true;
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag() {
-    window.dataLayer.push(arguments);
-  };
-
-  window.gtag('consent', 'default', {
+  window.gtag?.('consent', 'update', {
     analytics_storage: 'granted',
     ad_storage: 'denied',
     ad_user_data: 'denied',
     ad_personalization: 'denied',
   });
-  window.gtag('js', new Date());
-  window.gtag('config', GOOGLE_ANALYTICS_ID, {
-    anonymize_ip: true,
-  });
-
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`;
-  document.head.append(script);
 }
 
 function clearGoogleAnalyticsCookies() {
@@ -85,10 +65,12 @@ CookieConsent.run({
     }
 
     clearGoogleAnalyticsCookies();
-
-    if (analyticsLoaded) {
-      window.location.reload();
-    }
+    window.gtag?.('consent', 'update', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    });
   },
 
   categories: {
