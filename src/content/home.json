@@ -1,0 +1,76 @@
+{
+  "seo": {
+    "title": "Redmoor Consulting | Digital Efficiency, Software & AI",
+    "description": "Redmoor Consulting helps growing businesses improve digital efficiency, build enterprise software and unlock practical AI."
+  },
+  "ctaLabel": "Book a Discovery Call",
+  "hero": {
+    "eyebrow": "Digital transformation, made practical",
+    "lineOne": "Digital efficiency.",
+    "lineTwo": "Better software.",
+    "lineThree": "Smarter with",
+    "highlight": "AI.",
+    "copy": "We help growing businesses streamline operations, build powerful software and unlock the value of AI — turning complexity into measurable results.",
+    "trustedLabel": "Trusted experience with"
+  },
+  "metrics": [
+    { "label": "Workflows", "value": "35% more efficient" },
+    { "label": "Process Automation", "value": "120+ hours saved" },
+    { "label": "AI Insights", "value": "Better decisions" }
+  ],
+  "benefits": {
+    "eyebrow": "What we deliver",
+    "title": "Helping businesses work better",
+    "copy": "We combine process insight, software engineering and AI to remove friction, automate workflows and build systems that scale with you.",
+    "items": [
+      { "title": "Save time", "copy": "Eliminate manual work and repetitive tasks." },
+      { "title": "Increase productivity", "copy": "Empower your team with better tools and systems." },
+      { "title": "Reduce risk", "copy": "Improve data accuracy, compliance and visibility." },
+      { "title": "Drive growth", "copy": "Make smarter decisions with reliable insights." }
+    ]
+  },
+  "services": {
+    "eyebrow": "How we can help",
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Digital Efficiency",
+        "copy": "We analyse your processes, identify inefficiencies and implement practical solutions.",
+        "features": ["Process review & mapping", "Workflow automation", "System integration"]
+      },
+      {
+        "title": "Enterprise Software Development",
+        "copy": "Custom software built to solve real business problems and support your growth.",
+        "features": ["Web & cloud applications", "System modernisation", "Scalable architecture"]
+      },
+      {
+        "title": "AI Solutions",
+        "copy": "We turn your data into intelligence with secure, practical AI solutions that deliver results.",
+        "features": ["AI strategy & consulting", "Internal AI tools & copilots", "RAG & knowledge systems"]
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "The Redmoor difference",
+    "title": "Why work with Redmoor Consulting?",
+    "items": [
+      "Business-first approach — we solve real problems",
+      "End-to-end delivery from strategy to implementation",
+      "Practical AI that delivers measurable value",
+      "Local, independent and easy to work with"
+    ]
+  },
+  "contact": {
+    "eyebrow": "Start a conversation",
+    "title": "Ready to transform how your business works?",
+    "copy": "Let’s discuss how we can help you save time, reduce costs and grow with confidence.",
+    "url": "https://calendly.com/yaroslav-salmin-redmoorconsulting/30min"
+  },
+  "footer": {
+    "copy": "Helping businesses achieve digital efficiency, build better software and unlock the power of AI.",
+    "email": "hello@redmoorconsulting.co.uk",
+    "linkedInUrl": "https://www.linkedin.com/in/yaroslavsalmin",
+    "linkedInLabel": "Redmoor Consulting",
+    "copyright": "© 2017 Redmoor Consulting trading name of Salmin Limited. All rights reserved."
+  }
+}

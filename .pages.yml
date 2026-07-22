@@ -1,0 +1,87 @@
+media:
+  input: public/assets
+  output: /assets
+
+content:
+  - name: home
+    label: Home page
+    type: file
+    path: src/content/home.json
+    fields:
+      - name: seo
+        label: Search metadata
+        type: object
+        fields:
+          - { name: title, label: Page title, type: string, required: true }
+          - { name: description, label: Description, type: text, required: true }
+      - { name: ctaLabel, label: Call-to-action label, type: string, required: true }
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string, required: true }
+          - { name: lineOne, label: Heading line 1, type: string, required: true }
+          - { name: lineTwo, label: Heading line 2, type: string, required: true }
+          - { name: lineThree, label: Heading line 3, type: string, required: true }
+          - { name: highlight, label: Highlighted text, type: string, required: true }
+          - { name: copy, label: Introduction, type: text, required: true }
+          - { name: trustedLabel, label: Client logo label, type: string, required: true }
+      - name: metrics
+        label: Hero metrics
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string, required: true }
+          - { name: value, label: Value, type: string, required: true }
+      - name: benefits
+        label: Benefits
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string, required: true }
+          - { name: title, label: Heading, type: string, required: true }
+          - { name: copy, label: Introduction, type: text, required: true }
+          - name: items
+            label: Benefits
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: copy, label: Description, type: text, required: true }
+      - name: services
+        label: Services section
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string, required: true }
+          - { name: title, label: Heading, type: string, required: true }
+          - name: items
+            label: Services
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: copy, label: Description, type: text, required: true }
+              - { name: features, label: Features, type: string, list: true, required: true }
+      - name: why
+        label: Why Redmoor
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string, required: true }
+          - { name: title, label: Heading, type: string, required: true }
+          - { name: items, label: Reasons, type: string, list: true, required: true }
+      - name: contact
+        label: Contact call-to-action
+        type: object
+        fields:
+          - { name: eyebrow, label: Eyebrow, type: string, required: true }
+          - { name: title, label: Heading, type: string, required: true }
+          - { name: copy, label: Description, type: text, required: true }
+          - { name: url, label: Booking URL, type: string, required: true }
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - { name: copy, label: Description, type: text, required: true }
+          - { name: email, label: Email address, type: string, required: true }
+          - { name: linkedInUrl, label: LinkedIn URL, type: string, required: true }
+          - { name: linkedInLabel, label: LinkedIn label, type: string, required: true }
+          - { name: copyright, label: Copyright, type: string, required: true }
