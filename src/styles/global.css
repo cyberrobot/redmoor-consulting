@@ -286,7 +286,7 @@ a:focus-visible {
 .hero {
   padding: 4rem 0;
   background-color: var(--ivory);
-  background-image: url('assets/hero-background-desktop.jpg');
+  background-image: url('/assets/hero-background-desktop.jpg');
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -493,7 +493,7 @@ a:focus-visible {
   padding: 4rem 0;
   margin: 4rem 0;
   background: var(--white);
-  background-image: url('assets/why-redmoor-background-desktop.jpg');
+  background-image: url('/assets/why-redmoor-background-desktop.jpg');
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -668,7 +668,7 @@ a:focus-visible {
   }
   .hero {
     padding: 4rem 0;
-    background-image: url('assets/hero-background-mobile.jpg');
+    background-image: url('/assets/hero-background-mobile.jpg');
     background-position: bottom;
   }
   .container {
@@ -742,7 +742,7 @@ a:focus-visible {
     min-height: 0;
   }
   .why {
-    background-image: url('assets/why-redmoor-background-mobile.jpg');
+    background-image: url('/assets/why-redmoor-background-mobile.jpg');
     background-position: bottom;
   }
   .why-grid {
