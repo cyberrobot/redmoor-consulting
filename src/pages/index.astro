@@ -7,6 +7,11 @@ import home from '../content/home.json';
 const metricIcons = ['fa-chart-line', 'fa-circle-check', 'fa-chart-column'];
 const benefitIcons = ['fa-regular fa-clock', 'fa-solid fa-chart-line', 'fa-solid fa-shield-halved', 'fa-solid fa-sterling-sign'];
 const serviceIcons = ['fa-gears', 'fa-code', 'fa-wand-magic-sparkles'];
+const metricPositions = [
+  'top-12 left-12 max-[520px]:top-4 max-[520px]:-left-1.5',
+  'right-[-4rem] bottom-28 max-[1100px]:right-0 max-[520px]:-right-1.5 max-[520px]:bottom-[5.7rem]',
+  'bottom-4 left-16 max-[520px]:bottom-[0.2rem] max-[520px]:left-2',
+];
 const whyItems = home.why.items.map((item) => {
   const [lead, ...rest] = item.split(' — ');
   return { lead, detail: rest.join(' — ') };
@@ -25,82 +30,82 @@ const clientLogos = [
   <SiteHeader />
 
   <main>
-    <section class="hero section" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">{home.hero.eyebrow}</p>
-          <h1>
+    <section class="bg-ivory bg-[url('/assets/hero-background-desktop.jpg')] bg-cover bg-right bg-no-repeat py-16 max-md:bg-[url('/assets/hero-background-mobile.jpg')] max-md:bg-bottom" id="home">
+      <div class="mx-auto grid w-[min(calc(100%-3rem),1420px)] grid-cols-[minmax(0,1.02fr)_minmax(430px,0.98fr)] items-center gap-[clamp(3rem,7vw,6.5rem)] max-[1100px]:grid-cols-2 max-[1100px]:gap-12 max-md:w-[min(calc(100%-2rem),1420px)] max-md:grid-cols-1">
+        <div class="max-md:text-center">
+          <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">{home.hero.eyebrow}</p>
+          <h1 class="mb-6 font-heading text-[clamp(3.5rem,6.2vw,4.5rem)] leading-[0.98] font-semibold max-[520px]:text-[clamp(2.5rem,14vw,3rem)]">
             {home.hero.lineOne}<br />{home.hero.lineTwo}<br />{home.hero.lineThree}{' '}
-            <span>{home.hero.highlight}</span>
+            <span class="text-sage">{home.hero.highlight}</span>
           </h1>
-          <p class="hero-copy">{home.hero.copy}</p>
-          <div class="button-group">
-            <a class="btn btn-primary" href="#contact">{home.ctaLabel}</a>
+          <p class="mb-8 max-w-[620px] text-[1.08rem] text-muted max-md:mx-auto">{home.hero.copy}</p>
+          <div class="flex flex-wrap gap-3 max-md:justify-center max-[520px]:flex-col">
+            <a class="inline-flex min-h-[50px] items-center justify-center rounded-[7px] border border-transparent bg-forest px-6 py-3 text-[0.82rem] font-bold leading-tight text-white shadow-[0_8px_20px_rgb(18_61_45/0.18)] transition hover:-translate-y-0.5 hover:bg-forest-dark hover:shadow-[0_12px_26px_rgb(18_61_45/0.24)] max-[520px]:w-full" href="#contact">{home.ctaLabel}</a>
           </div>
-          <div class="trusted">
-            <span>{home.hero.trustedLabel}</span>
-            <div class="client-logos" aria-label="Client experience">
-              {clientLogos.map((logo) => <img src={logo.src} alt={logo.alt} />)}
+          <div class="col-span-full w-full pt-16 max-md:-mt-4 max-[520px]:-mt-6">
+            <span class="mb-4 block text-[0.66rem] font-semibold tracking-[0.12em] text-[#858a83] uppercase">{home.hero.trustedLabel}</span>
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-5" aria-label="Client experience">
+              {clientLogos.map((logo, index) => <img class:list={["h-10 w-auto max-w-[120px] object-contain opacity-[0.58] mix-blend-multiply grayscale max-[520px]:max-w-[100px]", index === clientLogos.length - 1 && "max-[520px]:size-[30px]"]} src={logo.src} alt={logo.alt} />)}
             </div>
           </div>
         </div>
-        <div class="hero-visual">
+        <div class="relative min-h-[570px] max-[1100px]:min-h-[500px] max-md:mx-auto max-md:w-[min(100%,560px)] max-[520px]:min-h-[430px]">
           {home.metrics.map((metric, index) => (
-            <article class={`metric-card metric-${['one', 'two', 'three'][index]}`}>
-              <span class="metric-icon"><i class={`fa-solid ${metricIcons[index]}`} aria-hidden="true"></i></span>
-              <div><small>{metric.label}</small><strong>{metric.value}</strong></div>
+            <article class:list={["absolute z-2 flex min-w-[205px] items-center gap-3 rounded-[10px] border border-white/80 bg-white/95 px-4 py-3.5 shadow-brand backdrop-blur-[6px] max-[520px]:min-w-[178px] max-[520px]:p-3", metricPositions[index]]}>
+              <span class="grid size-[34px] shrink-0 place-items-center rounded-full bg-ivory text-[0.8rem] text-forest"><i class={`fa-solid ${metricIcons[index]}`} aria-hidden="true"></i></span>
+              <div><small class="mb-0.5 block text-xs text-muted">{metric.label}</small><strong class="block text-[0.8rem] text-ink">{metric.value}</strong></div>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="benefits section" aria-labelledby="benefits-title">
-      <div class="container">
-        <div class="section-intro">
-          <p class="eyebrow">{home.benefits.eyebrow}</p>
-          <h2 class="section-heading" id="benefits-title">{home.benefits.title}</h2>
-          <p>{home.benefits.copy}</p>
+    <section class="bg-ivory py-[clamp(4.5rem,9vw,7.5rem)]" aria-labelledby="benefits-title">
+      <div class="mx-auto w-[min(calc(100%-3rem),1420px)] max-md:w-[min(calc(100%-2rem),1420px)]">
+        <div class="mx-auto mb-[clamp(2.7rem,5vw,4.2rem)] w-[min(100%,720px)] text-center">
+          <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">{home.benefits.eyebrow}</p>
+          <h2 class="mb-5 font-heading text-[clamp(2.3rem,4.5vw,3.2rem)] leading-[0.98] font-semibold text-ink" id="benefits-title">{home.benefits.title}</h2>
+          <p class="mx-auto mb-0 text-[1.05rem] text-muted">{home.benefits.copy}</p>
         </div>
-        <div class="benefit-grid">
+        <div class="grid grid-cols-4 gap-8 max-[1100px]:grid-cols-2 max-[1100px]:gap-x-16 max-[520px]:grid-cols-1">
           {home.benefits.items.map((benefit, index) => (
-            <article class="benefit-item">
-              <span class="icon-circle"><i class={benefitIcons[index]} aria-hidden="true"></i></span>
-              <div><h3>{benefit.title}</h3><p>{benefit.copy}</p></div>
+            <article class="flex gap-4">
+              <span class="inline-grid size-[52px] shrink-0 place-items-center rounded-full bg-beige text-[1.05rem] text-forest"><i class={benefitIcons[index]} aria-hidden="true"></i></span>
+              <div><h3 class="mt-0.5 mb-1.5 text-[1.18rem] leading-[1.35] font-bold">{benefit.title}</h3><p class="m-0 leading-[1.6] text-muted">{benefit.copy}</p></div>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="services section" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="dark-heading">
-          <p class="eyebrow">{home.services.eyebrow}</p>
-          <h2 class="section-heading" id="services-title">{home.services.title}</h2>
+    <section class="bg-forest py-[clamp(4.5rem,9vw,7.5rem)] text-white" id="services" aria-labelledby="services-title">
+      <div class="mx-auto w-[min(calc(100%-3rem),1420px)] max-md:w-[min(calc(100%-2rem),1420px)]">
+        <div class="mb-12 text-center">
+          <p class="mb-4 text-xs font-bold tracking-[0.17em] text-sage uppercase">{home.services.eyebrow}</p>
+          <h2 class="mb-5 font-heading text-[clamp(2.3rem,4.5vw,3.2rem)] leading-[0.98] font-semibold text-white" id="services-title">{home.services.title}</h2>
         </div>
-        <div class="service-grid">
+        <div class="grid grid-cols-3 max-md:grid-cols-1">
           {home.services.items.map((service, index) => (
-            <article class="service-item">
-              <span class="icon-circle"><i class={`fa-solid ${serviceIcons[index]}`} aria-hidden="true"></i></span>
-              <h3>{service.title}</h3>
-              <p>{service.copy}</p>
-              <ul class="check-list">{service.features.map((feature) => <li>{feature}</li>)}</ul>
+            <article class:list={["min-h-[300px] border-r border-white/20 px-[clamp(2rem,4vw,3.5rem)] py-2 max-md:min-h-0 max-md:border-r-0 max-md:border-b max-md:border-white/20 max-md:px-0 max-md:py-8", index === 0 && "pl-2 max-md:pt-0", index === home.services.items.length - 1 && "border-r-0 pr-2 max-md:border-b-0"]}>
+              <span class="mb-6 inline-grid size-[52px] place-items-center rounded-full bg-sage/30 text-[1.05rem] text-white"><i class={`fa-solid ${serviceIcons[index]}`} aria-hidden="true"></i></span>
+              <h3 class="mb-3 font-heading text-[1.6rem] leading-[1.35] font-bold">{service.title}</h3>
+              <p class="min-h-[60px] text-white/70 max-md:min-h-0">{service.copy}</p>
+              <ul class="mb-8 m-0 list-none p-0">{service.features.map((feature) => <li class="relative mb-2 pl-5 text-white/70 before:absolute before:left-0 before:font-bold before:text-sage before:content-['✓']">{feature}</li>)}</ul>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="why section" id="about" aria-labelledby="why-title">
-      <div class="container why-grid">
-        <div class="why-content">
-          <p class="eyebrow">{home.why.eyebrow}</p>
-          <h2 class="section-heading" id="why-title">{home.why.title}</h2>
-          <ul class="why-list">
+    <section class="my-16 bg-white bg-[url('/assets/why-redmoor-background-desktop.jpg')] bg-cover bg-right bg-no-repeat py-16 max-md:bg-[url('/assets/why-redmoor-background-mobile.jpg')] max-md:bg-bottom" id="about" aria-labelledby="why-title">
+      <div class="mx-auto grid w-[min(calc(100%-3rem),1420px)] grid-cols-[0.9fr_1.1fr] items-center gap-[clamp(3rem,8vw,7rem)] max-md:w-[min(calc(100%-2rem),1420px)] max-md:grid-cols-1">
+        <div class="max-md:text-center">
+          <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">{home.why.eyebrow}</p>
+          <h2 class="mb-5 font-heading text-[clamp(2.3rem,4.5vw,3.2rem)] leading-[0.98] font-semibold text-ink" id="why-title">{home.why.title}</h2>
+          <ul class="my-8 mb-9 m-0 list-none p-0 max-md:inline-block max-md:text-left">
             {whyItems.map((item, index) => (
-              <li>
-                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              <li class="mb-4 flex items-start gap-3 text-muted">
+                <i class="fa-solid fa-circle-check mt-1 text-sage" aria-hidden="true"></i>
                 {index === 0
                   ? <span><strong>{item.lead}</strong>{item.detail && ` — ${item.detail}`}</span>
                   : <span>{item.lead}{item.detail && ` — ${item.detail}`}</span>}
@@ -108,17 +113,17 @@ const clientLogos = [
             ))}
           </ul>
         </div>
-        <div class="image-placeholder dashboard-image" role="img" aria-label="Software analytics dashboard image"></div>
+        <div class="min-h-[410px] max-md:min-h-[350px] max-[520px]:min-h-[260px]" role="img" aria-label="Software analytics dashboard image"></div>
       </div>
     </section>
 
-    <section class="cta-section section" id="contact" aria-labelledby="cta-title">
-      <div class="container">
-        <div class="cta-panel">
-          <p class="eyebrow">{home.contact.eyebrow}</p>
-          <h2 class="section-heading" id="cta-title">{home.contact.title}</h2>
-          <p>{home.contact.copy}</p>
-          <a class="btn btn-primary" href={home.contact.url}>{home.ctaLabel}</a>
+    <section class="pt-0 pb-[clamp(4.5rem,9vw,7.5rem)]" id="contact" aria-labelledby="cta-title">
+      <div class="mx-auto w-[min(calc(100%-3rem),1420px)] max-md:w-[min(calc(100%-2rem),1420px)]">
+        <div class="rounded-[28px] border border-line bg-linear-to-br from-beige to-ivory to-[72%] px-6 py-[clamp(4rem,8vw,6.5rem)] text-center max-[520px]:px-5">
+          <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">{home.contact.eyebrow}</p>
+          <h2 class="mx-auto mb-5 max-w-[720px] font-heading text-[clamp(2.3rem,4.5vw,3.2rem)] leading-[0.98] font-semibold text-ink" id="cta-title">{home.contact.title}</h2>
+          <p class="mx-auto mb-8 max-w-[590px] text-muted">{home.contact.copy}</p>
+          <a class="inline-flex min-h-[50px] items-center justify-center rounded-[7px] border border-transparent bg-forest px-6 py-3 text-[0.82rem] font-bold leading-tight text-white shadow-[0_8px_20px_rgb(18_61_45/0.18)] transition hover:-translate-y-0.5 hover:bg-forest-dark hover:shadow-[0_12px_26px_rgb(18_61_45/0.24)] max-[520px]:w-full" href={home.contact.url}>{home.ctaLabel}</a>
         </div>
       </div>
     </section>

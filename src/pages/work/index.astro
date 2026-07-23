@@ -11,37 +11,37 @@ const workItems = await getCollection('work', ({ data }) => !data.draft);
   title="Our Work | Redmoor Consulting"
   description="Explore how Redmoor Consulting delivers secure, scalable software and digital experiences for leading organisations."
 >
-  <div class="work-page">
+  <div class="min-h-screen bg-[#fbfaf7] text-[#111b17]">
     <SiteHeader />
 
-    <main class="work-index-main">
-      <div class="container">
-        <header class="work-index-intro">
-          <p class="eyebrow">Our work</p>
-          <h1>Solutions that deliver<br />measurable impact</h1>
-          <p>
+    <main class="pt-[clamp(3rem,6vw,5.5rem)] pb-[clamp(5rem,9vw,8rem)] max-[760px]:pt-11">
+      <div class="mx-auto w-[min(calc(100%-3rem),1420px)] max-md:w-[min(calc(100%-2rem),1420px)]">
+        <header class="mb-[clamp(3rem,6vw,5rem)] max-w-[720px] max-[760px]:mb-11">
+          <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">Our work</p>
+          <h1 class="mb-5 font-heading text-[clamp(3.25rem,5.6vw,5rem)] leading-[0.96] font-semibold text-forest max-[760px]:text-[clamp(2.75rem,13vw,3.75rem)]">Solutions that deliver<br />measurable impact</h1>
+          <p class="mb-0 max-w-[680px] text-[1.05rem] leading-[1.65] text-[#111b17]">
             We partner with organisations across industries to solve complex problems,
             build better software and unlock the value of AI.
           </p>
         </header>
 
-        <div class="work-index-list" aria-label="Case studies">
+        <div class="border-t border-[#dddcd7]" aria-label="Case studies">
           {workItems.map(({ id, data }) => (
-            <article class="work-index-item">
-              <div class="work-index-client">
-                <img src={data.clientLogo} alt={data.clientLogoAlt} />
+            <article class="grid min-h-[155px] grid-cols-[minmax(190px,0.8fr)_minmax(0,2.35fr)_minmax(190px,0.85fr)] items-center gap-[clamp(1.5rem,4vw,4rem)] border-b border-[#dddcd7] py-6 max-[1100px]:grid-cols-[minmax(165px,0.75fr)_minmax(0,2fr)_minmax(165px,0.8fr)] max-[1100px]:gap-6 max-[760px]:min-h-0 max-[760px]:grid-cols-1 max-[760px]:gap-5 max-[760px]:py-8">
+              <div>
+                <img class="h-auto max-h-16 w-auto max-w-[200px] object-contain object-left max-[760px]:max-h-[52px] max-[760px]:max-w-[175px]" src={data.clientLogo} alt={data.clientLogoAlt} />
               </div>
-              <div class="work-index-content">
-                <h2>
-                  <a href={`/work/${id}/`}>{data.title}</a>
+              <div>
+                <h2 class="mb-1.5 font-heading text-[clamp(1.45rem,2vw,1.75rem)] leading-[1.15] font-semibold text-[#111b17] max-[760px]:text-[1.65rem]">
+                  <a class="hover:text-forest" href={`/work/${id}/`}>{data.title}</a>
                 </h2>
-                <p>{data.seoDescription}</p>
+                <p class="m-0 max-w-[720px] leading-[1.65] text-[#303a35]">{data.seoDescription}</p>
               </div>
-              <div class="work-index-action">
-                <span class="work-index-industry">{data.industry}</span>
-                <a href={`/work/${id}/`} aria-label={`View ${data.client} project`}>
+              <div class="flex flex-col items-start gap-3 justify-self-start max-[760px]:w-full max-[760px]:flex-row max-[760px]:items-center max-[760px]:justify-between">
+                <span class="inline-flex rounded-[5px] bg-[#efede6] px-2.5 py-1 text-[0.68rem] leading-tight font-bold tracking-[0.15em] text-forest uppercase">{data.industry}</span>
+                <a class="group inline-flex min-h-11 items-center gap-4.5 text-[0.9rem] font-medium text-forest" href={`/work/${id}/`} aria-label={`View ${data.client} project`}>
                   View project
-                  <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-right-long text-[#8b895f] transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
                 </a>
               </div>
             </article>

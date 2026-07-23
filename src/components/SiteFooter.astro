@@ -2,40 +2,40 @@
 import home from '../content/home.json';
 ---
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand brand-light" href="/" aria-label="Redmoor Consulting home">
-          <img class="brand-logo" src="/assets/logo-dark.png" alt="Redmoor Consulting" />
+<footer class="bg-forest-dark pt-[4.5rem] text-white">
+  <div class="mx-auto w-[min(calc(100%-3rem),1420px)] max-md:w-[min(calc(100%-2rem),1420px)]">
+    <div class="grid grid-cols-[1.55fr_0.8fr_0.8fr] gap-12 pb-[3.7rem] max-[1100px]:grid-cols-[1.4fr_1fr_1fr] max-md:grid-cols-2 max-[520px]:grid-cols-1">
+      <div>
+        <a class="inline-flex shrink-0 items-center gap-2.5" href="/" aria-label="Redmoor Consulting home">
+          <img class="block h-auto w-[180px]" src="/assets/logo-dark.png" alt="Redmoor Consulting" />
         </a>
-        <p>{home.footer.copy}</p>
+        <p class="mt-6 max-w-[300px] text-[0.78rem] text-white/60">{home.footer.copy}</p>
       </div>
       <div>
-        <h2>Services</h2>
-        <ul>{home.services.items.map((service) => <li>{service.title}</li>)}</ul>
+        <h2 class="mt-1.5 mb-5 font-sans text-xs font-bold tracking-[0.12em] text-white uppercase">Services</h2>
+        <ul class="m-0 list-none p-0">{home.services.items.map((service) => <li class="mb-2.5 text-xs text-white/70">{service.title}</li>)}</ul>
       </div>
-      <div>
-        <h2>Connect</h2>
-        <ul class="contact-list">
-          <li>
-            <a href={`mailto:${home.footer.email}`}>
-              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+      <div class="max-[1100px]:col-span-2 max-[1100px]:col-start-2 max-md:col-auto">
+        <h2 class="mt-1.5 mb-5 font-sans text-xs font-bold tracking-[0.12em] text-white uppercase">Connect</h2>
+        <ul class="m-0 list-none p-0">
+          <li class="mb-2.5 text-xs text-white/70">
+            <a class="flex items-start gap-2.5 break-words hover:text-white" href={`mailto:${home.footer.email}`}>
+              <i class="fa-regular fa-envelope mt-1 w-4 text-center text-sage" aria-hidden="true"></i>
               <span>{home.footer.email}</span>
             </a>
           </li>
-          <li>
-            <a href={home.footer.linkedInUrl} aria-label="Redmoor Consulting on LinkedIn">
-              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          <li class="mb-2.5 text-xs text-white/70">
+            <a class="flex items-start gap-2.5 break-words hover:text-white" href={home.footer.linkedInUrl} aria-label="Redmoor Consulting on LinkedIn">
+              <i class="fa-brands fa-linkedin-in mt-1 w-4 text-center text-sage" aria-hidden="true"></i>
               <span>{home.footer.linkedInLabel}</span>
             </a>
           </li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>{home.footer.copyright}</p>
-      <button class="cookie-settings-link" type="button">Cookie settings</button>
+    <div class="flex items-center justify-between gap-4 border-t border-white/15 py-5 pb-7 max-[520px]:flex-col max-[520px]:text-center">
+      <p class="m-0 text-sm text-white/50">{home.footer.copyright}</p>
+      <button class="cursor-pointer border-0 border-b border-white/35 bg-transparent p-0 font-[inherit] text-sm text-white/70 hover:border-white hover:text-white focus-visible:border-white focus-visible:text-white" type="button">Cookie settings</button>
     </div>
   </div>
 </footer>
