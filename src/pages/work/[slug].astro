@@ -1,0 +1,74 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import WorkLayout from '../../layouts/WorkLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('work', ({ data }) => !data.draft);
+
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'work'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { data } = entry;
+
+const outcomeIcons = {
+  shield: 'fa-shield-halved',
+  puzzle: 'fa-puzzle-piece',
+  growth: 'fa-chart-simple',
+  team: 'fa-people-group',
+};
+---
+
+<WorkLayout title={data.seoTitle} description={data.seoDescription} client={data.client}>
+  <article class="work">
+    <section class="work-overview" aria-labelledby="work-title">
+      <img class="work-client-logo" src={data.clientLogo} alt={data.clientLogoAlt} />
+      <h1 id="work-title">{data.title}</h1>
+      <span class="work-rule" aria-hidden="true"></span>
+      <div class="work-summary">
+        <Content />
+      </div>
+
+      <dl class="work-meta">
+        <div>
+          <dt>Industry</dt>
+          <dd>{data.industry}</dd>
+        </div>
+        <div>
+          <dt>Partners</dt>
+          <dd>{data.partners}</dd>
+        </div>
+        <div>
+          <dt>Engagement</dt>
+          <dd>{data.engagement}</dd>
+        </div>
+      </dl>
+    </section>
+
+    <aside class="work-outcomes" aria-labelledby="outcomes-title">
+      <h2 id="outcomes-title">Outcomes</h2>
+      <span class="work-rule" aria-hidden="true"></span>
+      <div class="outcome-list">
+        {data.outcomes.map((outcome) => (
+          <section class="outcome-item">
+            <span class="outcome-icon">
+              <i class={`fa-solid ${outcomeIcons[outcome.icon]}`} aria-hidden="true"></i>
+            </span>
+            <div>
+              <h3>{outcome.title}</h3>
+              <p>{outcome.description}</p>
+            </div>
+          </section>
+        ))}
+      </div>
+    </aside>
+  </article>
+</WorkLayout>

@@ -1,0 +1,25 @@
+---
+import home from '../content/home.json';
+
+const isWork = Astro.url.pathname.startsWith('/work/');
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Redmoor Consulting home">
+      <img class="brand-logo" src="/assets/logo-light.png" alt="Redmoor Consulting" />
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Home</a>
+      <!-- <a href="/#services">Services</a> -->
+      <a
+        href="/work/santander-auto-services/"
+        aria-current={isWork ? 'page' : undefined}
+      >
+        Work
+      </a>
+      <!-- <a href="/#about">About</a> -->
+    </nav>
+    <a class="btn btn-primary header-cta" href={home.contact.url}>{home.ctaLabel}</a>
+  </div>
+</header>
