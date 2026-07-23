@@ -1,7 +1,8 @@
 ---
 import home from '../content/home.json';
 
-const isWork = Astro.url.pathname.startsWith('/work/');
+const isWork =
+  Astro.url.pathname === '/work' || Astro.url.pathname.startsWith('/work/');
 ---
 
 <header class="site-header">
@@ -13,7 +14,7 @@ const isWork = Astro.url.pathname.startsWith('/work/');
       <a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Home</a>
       <!-- <a href="/#services">Services</a> -->
       <a
-        href="/work/santander-auto-services/"
+        href="/work/"
         aria-current={isWork ? 'page' : undefined}
       >
         Work
