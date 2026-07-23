@@ -247,7 +247,7 @@ a:focus-visible {
 }
 .brand-logo {
   display: block;
-  width: 250px;
+  width: 180px;
   height: auto;
 }
 .main-nav {
@@ -280,6 +280,9 @@ a:focus-visible {
 }
 .header-cta {
   margin-left: 0.4rem;
+  min-height: 42px;
+  padding: 0.6rem 1rem;
+  font-size: 0.75rem;
 }
 
 /* Hero */
@@ -681,7 +684,7 @@ a:focus-visible {
     margin-right: auto;
   }
   .header-cta {
-    padding-inline: 1rem;
+    padding-inline: 0.75rem;
   }
   .main-nav {
     gap: clamp(1rem, 6vw, 2.2rem);
@@ -778,16 +781,10 @@ a:focus-visible {
   .brand-logo {
     width: 165px;
   }
-  .header-cta {
-    display: none;
-  }
   .main-nav {
     order: 3;
     justify-content: space-between;
     gap: 0.5rem;
-  }
-  .main-nav a {
-    font-size: 0.7rem;
   }
   .button-group {
     flex-direction: column;
