@@ -33,43 +33,43 @@ const outcomeIcons = {
 ---
 
 <WorkLayout title={data.seoTitle} description={data.seoDescription} client={data.client}>
-  <article class="work">
-    <section class="work-overview" aria-labelledby="work-title">
-      <img class="work-client-logo" src={data.clientLogo} alt={data.clientLogoAlt} />
-      <h1 id="work-title">{data.title}</h1>
-      <span class="work-rule" aria-hidden="true"></span>
-      <div class="work-summary">
+  <article class="grid grid-cols-[minmax(0,61.5fr)_minmax(370px,38.5fr)] overflow-hidden max-[1100px]:grid-cols-1">
+    <section class="flex min-h-[800px] flex-col py-[2.7rem] pb-[2.4rem] max-[1100px]:min-h-[720px] max-[760px]:min-h-0 max-[760px]:py-8" aria-labelledby="work-title">
+      <img class="mb-6 max-h-[60px] w-[250px] object-contain object-left max-[760px]:w-[180px]" src={data.clientLogo} alt={data.clientLogoAlt} />
+      <h1 class="mb-7 max-w-[720px] font-heading text-[clamp(3.1rem,4.7vw,4.5rem)] leading-[0.98] font-semibold text-forest max-[760px]:text-[clamp(2.6rem,13vw,3.5rem)]" id="work-title">{data.title}</h1>
+      <span class="block h-0.5 w-[60px] shrink-0 bg-[#99966d]" aria-hidden="true"></span>
+      <div class="work-summary mt-8 max-w-[710px]">
         <Content />
       </div>
 
-      <dl class="work-meta">
-        <div>
-          <dt>Industry</dt>
-          <dd>{data.industry}</dd>
+      <dl class="mt-auto grid grid-cols-3 max-[760px]:mt-12 max-[760px]:grid-cols-1">
+        <div class="min-w-0 pl-1 max-[760px]:border-t max-[760px]:border-[#dddcd7] max-[760px]:px-0 max-[760px]:py-5">
+          <dt class="mb-0.5 text-[0.78rem] font-bold tracking-[0.06em] text-[#8b895f] uppercase">Industry</dt>
+          <dd class="m-0 text-[0.94rem] leading-[1.5] text-[#17211d]">{data.industry}</dd>
         </div>
-        <div>
-          <dt>Partners</dt>
-          <dd>{data.partners}</dd>
+        <div class="min-w-0 border-l border-[#dddcd7] px-11 max-[760px]:border-t max-[760px]:border-l-0 max-[760px]:px-0 max-[760px]:py-5">
+          <dt class="mb-0.5 text-[0.78rem] font-bold tracking-[0.06em] text-[#8b895f] uppercase">Partners</dt>
+          <dd class="m-0 text-[0.94rem] leading-[1.5] text-[#17211d]">{data.partners}</dd>
         </div>
-        <div>
-          <dt>Engagement</dt>
-          <dd>{data.engagement}</dd>
+        <div class="min-w-0 border-l border-[#dddcd7] px-11 max-[760px]:border-t max-[760px]:border-l-0 max-[760px]:px-0 max-[760px]:py-5">
+          <dt class="mb-0.5 text-[0.78rem] font-bold tracking-[0.06em] text-[#8b895f] uppercase">Engagement</dt>
+          <dd class="m-0 text-[0.94rem] leading-[1.5] text-[#17211d]">{data.engagement}</dd>
         </div>
       </dl>
     </section>
 
-    <aside class="work-outcomes" aria-labelledby="outcomes-title">
-      <h2 id="outcomes-title">Outcomes</h2>
-      <span class="work-rule" aria-hidden="true"></span>
-      <div class="outcome-list">
+    <aside class="border-l border-[#dddcd7] py-9 pr-0 pl-12 max-[1100px]:border-t max-[1100px]:border-l-0 max-[760px]:py-8 max-[760px]:pl-0" aria-labelledby="outcomes-title">
+      <h2 class="mb-5 font-sans text-[1.02rem] leading-none font-bold tracking-[0.18em] text-forest uppercase" id="outcomes-title">Outcomes</h2>
+      <span class="block h-0.5 w-[60px] bg-[#99966d]" aria-hidden="true"></span>
+      <div class="mt-6">
         {data.outcomes.map((outcome) => (
-          <section class="outcome-item">
-            <span class="outcome-icon">
+          <section class="grid grid-cols-[92px_1fr] items-start gap-6 border-b border-[#dddcd7] py-8 first:pt-1 last:border-b-0 last:pb-0 max-[760px]:grid-cols-[72px_1fr] max-[760px]:gap-4">
+            <span class="inline-flex size-[88px] items-center justify-center rounded-full bg-[#f0efe9] text-[2.1rem] text-forest max-[760px]:size-[68px] max-[760px]:text-[1.6rem]">
               <i class={`fa-solid ${outcomeIcons[outcome.icon]}`} aria-hidden="true"></i>
             </span>
             <div>
-              <h3>{outcome.title}</h3>
-              <p>{outcome.description}</p>
+              <h3 class="mb-2 font-heading text-[1.45rem] font-bold text-forest">{outcome.title}</h3>
+              <p class="m-0 text-[0.96rem] leading-[1.75] text-[#111b17]">{outcome.description}</p>
             </div>
           </section>
         ))}

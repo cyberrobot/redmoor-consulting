@@ -5,15 +5,16 @@ const isWork =
   Astro.url.pathname === '/work' || Astro.url.pathname.startsWith('/work/');
 ---
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="/" aria-label="Redmoor Consulting home">
-      <img class="brand-logo" src="/assets/logo-light.png" alt="Redmoor Consulting" />
+<header class="relative z-10 border-b border-line/75 bg-ivory/90">
+  <div class="mx-auto flex min-h-[100px] w-[min(calc(100%-3rem),1420px)] items-center justify-between gap-10 py-4 max-[1100px]:flex-wrap max-[1100px]:gap-x-8 max-[1100px]:gap-y-2 max-md:w-[min(calc(100%-2rem),1420px)] max-md:justify-center">
+    <a class="inline-flex shrink-0 items-center gap-2.5 max-md:mr-auto" href="/" aria-label="Redmoor Consulting home">
+      <img class="block h-auto w-[180px] max-[520px]:w-[165px]" src="/assets/logo-light.png" alt="Redmoor Consulting" />
     </a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Home</a>
+    <nav class="ml-auto flex items-center gap-[clamp(2rem,4vw,3.5rem)] text-[0.95rem] font-medium max-[1100px]:order-3 max-[1100px]:ml-0 max-[1100px]:w-full max-[1100px]:justify-center max-[1100px]:border-t max-[1100px]:border-line max-md:justify-start max-md:gap-[clamp(1rem,6vw,2.2rem)] max-md:overflow-x-auto max-[520px]:justify-between max-[520px]:gap-2" aria-label="Primary navigation">
+      <a class="relative min-h-11 content-center after:absolute after:inset-x-0 after:bottom-[7px] after:h-px after:origin-center after:scale-x-0 after:bg-forest after:transition-transform hover:after:scale-x-100 aria-[current=page]:after:scale-x-100" href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Home</a>
       <!-- <a href="/#services">Services</a> -->
       <a
+        class="relative min-h-11 content-center after:absolute after:inset-x-0 after:bottom-[7px] after:h-px after:origin-center after:scale-x-0 after:bg-forest after:transition-transform hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"
         href="/work/"
         aria-current={isWork ? 'page' : undefined}
       >
@@ -21,6 +22,6 @@ const isWork =
       </a>
       <!-- <a href="/#about">About</a> -->
     </nav>
-    <a class="btn btn-primary header-cta" href={home.contact.url}>{home.ctaLabel}</a>
+    <a class="ml-1 inline-flex min-h-[42px] items-center justify-center rounded-[7px] border border-transparent bg-forest px-4 py-2 text-xs font-bold leading-tight text-white shadow-[0_8px_20px_rgb(18_61_45/0.18)] transition hover:-translate-y-0.5 hover:bg-forest-dark hover:shadow-[0_12px_26px_rgb(18_61_45/0.24)] max-[1100px]:ml-auto max-md:px-3" href={home.contact.url}>{home.ctaLabel}</a>
   </div>
 </header>
