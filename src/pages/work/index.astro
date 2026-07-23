@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import SiteFooter from '../../components/SiteFooter.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const workItems = await getCollection('work', ({ data }) => !data.draft);
+---
+
+<BaseLayout
+  title="Our Work | Redmoor Consulting"
+  description="Explore how Redmoor Consulting delivers secure, scalable software and digital experiences for leading organisations."
+>
+  <div class="work-page">
+    <SiteHeader />
+
+    <main class="work-index-main">
+      <div class="container">
+        <header class="work-index-intro">
+          <p class="eyebrow">Our work</p>
+          <h1>Solutions that deliver<br />measurable impact</h1>
+          <p>
+            We partner with organisations across industries to solve complex problems,
+            build better software and unlock the value of AI.
+          </p>
+        </header>
+
+        <div class="work-index-list" aria-label="Case studies">
+          {workItems.map(({ id, data }) => (
+            <article class="work-index-item">
+              <div class="work-index-client">
+                <img src={data.clientLogo} alt={data.clientLogoAlt} />
+              </div>
+              <div class="work-index-content">
+                <h2>
+                  <a href={`/work/${id}/`}>{data.title}</a>
+                </h2>
+                <p>{data.seoDescription}</p>
+              </div>
+              <div class="work-index-action">
+                <span class="work-index-industry">{data.industry}</span>
+                <a href={`/work/${id}/`} aria-label={`View ${data.client} project`}>
+                  View project
+                  <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </main>
+
+    <SiteFooter />
+  </div>
+</BaseLayout>
