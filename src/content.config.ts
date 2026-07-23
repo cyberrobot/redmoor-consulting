@@ -19,7 +19,17 @@ const work = defineCollection({
       z.object({
         title: z.string(),
         description: z.string(),
-        icon: z.enum(['shield', 'puzzle', 'growth', 'team']),
+        icon: z.enum([
+          'shield',
+          'puzzle',
+          'growth',
+          'team',
+          'grid',
+          'layers',
+          'code',
+          'accessibility',
+          'brush',
+        ]),
       }),
     ),
   }),

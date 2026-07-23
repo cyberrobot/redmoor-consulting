@@ -900,7 +900,7 @@ article.work {
 }
 .work-client-logo {
   width: 250px;
-  max-height: 108px;
+  max-height: 60px;
   margin-bottom: 1.45rem;
   object-fit: contain;
   object-position: left center;
