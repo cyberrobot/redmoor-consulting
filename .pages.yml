@@ -85,3 +85,36 @@ content:
           - { name: linkedInUrl, label: LinkedIn URL, type: string, required: true }
           - { name: linkedInLabel, label: LinkedIn label, type: string, required: true }
           - { name: copyright, label: Copyright, type: string, required: true }
+  - name: work
+    label: Work
+    type: collection
+    path: src/content/work
+    fields:
+      - { name: client, label: Client, type: string, required: true }
+      - { name: clientLogo, label: Client logo, type: image, required: true }
+      - { name: clientLogoAlt, label: Client logo alternative text, type: string, required: true }
+      - { name: title, label: Project title, type: string, required: true }
+      - { name: seoTitle, label: SEO title, type: string, required: true }
+      - { name: seoDescription, label: SEO description, type: text, required: true }
+      - { name: industry, label: Industry, type: string, required: true }
+      - { name: partners, label: Partners, type: string, required: true }
+      - { name: engagement, label: Engagement, type: string, required: true }
+      - { name: draft, label: Draft, type: boolean, default: false }
+      - name: outcomes
+        label: Outcomes
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string, required: true }
+          - { name: description, label: Description, type: text, required: true }
+          - name: icon
+            label: Icon
+            type: select
+            required: true
+            options:
+              values:
+                - { name: shield, label: Shield }
+                - { name: puzzle, label: Puzzle }
+                - { name: growth, label: Growth }
+                - { name: team, label: Team }
+      - { name: body, label: Summary, type: rich-text, required: true }

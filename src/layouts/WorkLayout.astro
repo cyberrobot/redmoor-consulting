@@ -1,0 +1,33 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  client: string;
+}
+
+const { title, description, client } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="work-page">
+    <SiteHeader />
+
+    <main class="work-main">
+      <div class="container">
+        <nav class="work-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          <span>Work</span>
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          <span aria-current="page">{client}</span>
+        </nav>
+        <slot />
+      </div>
+    </main>
+    <SiteFooter />
+  </div>
+</BaseLayout>

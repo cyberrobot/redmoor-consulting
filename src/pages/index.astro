@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
 import home from '../content/home.json';
 
 const metricIcons = ['fa-chart-line', 'fa-circle-check', 'fa-chart-column'];
@@ -20,14 +22,7 @@ const clientLogos = [
 ---
 
 <BaseLayout title={home.seo.title} description={home.seo.description}>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Redmoor Consulting home">
-        <img class="brand-logo" src="/assets/logo-light.png" alt="Redmoor Consulting" />
-      </a>
-      <a class="btn btn-primary header-cta" href="#contact">{home.ctaLabel}</a>
-    </div>
-  </header>
+  <SiteHeader />
 
   <main>
     <section class="hero section" id="home">
@@ -129,31 +124,5 @@ const clientLogos = [
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand brand-light" href="/" aria-label="Redmoor Consulting home">
-            <img class="brand-logo" src="/assets/logo-dark.png" alt="Redmoor Consulting" />
-          </a>
-          <p>{home.footer.copy}</p>
-        </div>
-        <div>
-          <h2>Services</h2>
-          <ul>{home.services.items.map((service) => <li>{service.title}</li>)}</ul>
-        </div>
-        <div>
-          <h2>Connect</h2>
-          <ul class="contact-list">
-            <li><a href={`mailto:${home.footer.email}`}><i class="fa-regular fa-envelope" aria-hidden="true"></i><span>{home.footer.email}</span></a></li>
-            <li><a href={home.footer.linkedInUrl} aria-label="Redmoor Consulting on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>{home.footer.linkedInLabel}</span></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>{home.footer.copyright}</p>
-        <button class="cookie-settings-link" type="button">Cookie settings</button>
-      </div>
-    </div>
-  </footer>
+  <SiteFooter />
 </BaseLayout>
