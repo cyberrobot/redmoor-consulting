@@ -19,6 +19,7 @@ const whyItems = home.why.items.map((item) => {
 const clientLogos = [
   { src: '/assets/jci-logo.png', alt: 'JCI' },
   { src: '/assets/lloyds-bank-logo.png', alt: 'Lloyds Bank' },
+  { src: '/assets/satago-logo.svg', alt: 'Satago' },
   { src: '/assets/morrisons-logo.png', alt: 'Morrisons' },
   { src: '/assets/santander-logo.png', alt: 'Santander' },
   { src: '/assets/vw-logo.png', alt: 'Volkswagen' },
@@ -45,7 +46,7 @@ const clientLogos = [
           <div class="col-span-full w-full pt-16 max-md:-mt-4 max-[520px]:-mt-6">
             <span class="mb-4 block text-[0.66rem] font-semibold tracking-[0.12em] text-[#858a83] uppercase">{home.hero.trustedLabel}</span>
             <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-5" aria-label="Client experience">
-              {clientLogos.map((logo, index) => <img class:list={["h-10 w-auto max-w-[120px] object-contain opacity-[0.58] mix-blend-multiply grayscale max-[520px]:max-w-[100px]", index === clientLogos.length - 1 && "max-[520px]:size-[30px]"]} src={logo.src} alt={logo.alt} />)}
+              {clientLogos.map((logo, index) => <img class:list={["h-8 w-auto max-w-30 object-contain opacity-[0.58] mix-blend-multiply grayscale max-[520px]:max-w-[100px]", index === clientLogos.length - 1 && "max-[520px]:size-[30px]"]} src={logo.src} alt={logo.alt} />)}
             </div>
           </div>
         </div>

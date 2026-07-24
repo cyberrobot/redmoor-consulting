@@ -29,6 +29,8 @@ const work = defineCollection({
           'code',
           'accessibility',
           'brush',
+          'network',
+          'person',
         ]),
       }),
     ),

@@ -29,7 +29,7 @@ const workItems = await getCollection('work', ({ data }) => !data.draft);
           {workItems.map(({ id, data }) => (
             <article class="grid min-h-[155px] grid-cols-[minmax(190px,0.8fr)_minmax(0,2.35fr)_minmax(190px,0.85fr)] items-center gap-[clamp(1.5rem,4vw,4rem)] border-b border-[#dddcd7] py-6 max-[1100px]:grid-cols-[minmax(165px,0.75fr)_minmax(0,2fr)_minmax(165px,0.8fr)] max-[1100px]:gap-6 max-[760px]:min-h-0 max-[760px]:grid-cols-1 max-[760px]:gap-5 max-[760px]:py-8">
               <div>
-                <img class="h-auto max-h-16 w-auto max-w-[200px] object-contain object-left max-[760px]:max-h-[52px] max-[760px]:max-w-[175px]" src={data.clientLogo} alt={data.clientLogoAlt} />
+                <img class="h-auto max-h-10 w-auto max-w-[200px] object-contain object-left max-[760px]:max-w-[175px]" src={data.clientLogo} alt={data.clientLogoAlt} />
               </div>
               <div>
                 <h2 class="mb-1.5 font-heading text-[clamp(1.45rem,2vw,1.75rem)] leading-[1.15] font-semibold text-[#111b17] max-[760px]:text-[1.65rem]">
