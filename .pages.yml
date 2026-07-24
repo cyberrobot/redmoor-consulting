@@ -117,4 +117,11 @@ content:
                 - { name: puzzle, label: Puzzle }
                 - { name: growth, label: Growth }
                 - { name: team, label: Team }
+                - { name: grid, label: Grid }
+                - { name: layers, label: Layers }
+                - { name: code, label: Code }
+                - { name: accessibility, label: Accessibility }
+                - { name: brush, label: Brush }
+                - { name: network, label: Network }
+                - { name: person, label: Person }
       - { name: body, label: Summary, type: rich-text, required: true }
