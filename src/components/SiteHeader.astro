@@ -3,6 +3,8 @@ import home from '../content/home.json';
 
 const isWork =
   Astro.url.pathname === '/work' || Astro.url.pathname.startsWith('/work/');
+const isAbout =
+  Astro.url.pathname === '/about' || Astro.url.pathname.startsWith('/about/');
 ---
 
 <header class="relative z-10 border-b border-line/75 bg-ivory/90">
@@ -20,7 +22,13 @@ const isWork =
       >
         Work
       </a>
-      <!-- <a href="/#about">About</a> -->
+      <a
+        class="relative min-h-11 content-center after:absolute after:inset-x-0 after:bottom-[7px] after:h-px after:origin-center after:scale-x-0 after:bg-forest after:transition-transform hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"
+        href="/about/"
+        aria-current={isAbout ? 'page' : undefined}
+      >
+        About
+      </a>
     </nav>
     <a class="ml-1 inline-flex min-h-[42px] items-center justify-center rounded-[7px] border border-transparent bg-forest px-4 py-2 text-xs font-bold leading-tight text-white shadow-[0_8px_20px_rgb(18_61_45/0.18)] transition hover:-translate-y-0.5 hover:bg-forest-dark hover:shadow-[0_12px_26px_rgb(18_61_45/0.24)] max-[1100px]:ml-auto max-md:px-3" href={home.contact.url}>{home.ctaLabel}</a>
   </div>
