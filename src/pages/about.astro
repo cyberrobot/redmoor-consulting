@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+
+const expertise = [
+  {
+    icon: 'fa-solid fa-brain',
+    title: 'AI Development',
+    copy: 'Building grounded AI applications — including RAG systems, knowledge assistants and AI-powered workflows.',
+  },
+  {
+    icon: 'fa-solid fa-code',
+    title: 'Enterprise Software Development',
+    copy: 'Architecting and building scalable, secure and maintainable frontend and full-stack systems.',
+  },
+  {
+    icon: 'fa-solid fa-sliders',
+    title: 'Project Management & Delivery',
+    copy: 'Leading projects from discovery to delivery with clear planning, risk management and stakeholder alignment.',
+  },
+  {
+    icon: 'fa-solid fa-microchip',
+    title: 'AI-Assisted Development',
+    copy: 'Leveraging AI tools to accelerate development, improve quality and increase engineering productivity.',
+  },
+  {
+    icon: 'fa-solid fa-shield-halved',
+    title: 'Operational Excellence & Integration',
+    copy: 'Observability, auditability and secure integration patterns that support enterprise adoption and scale.',
+  },
+];
+
+const clientLogos = [
+  { src: '/assets/santander-logo.png', alt: 'Santander' },
+  { src: '/assets/sky-logo.png', alt: 'Sky' },
+  { src: '/assets/satago-logo.svg', alt: 'Satago' },
+  { src: '/assets/sensormatic-logo.svg', alt: 'Sensormatic by Johnson Controls' },
+  { src: '/assets/vw-logo.png', alt: 'Volkswagen' },
+  { src: '/assets/morrisons-logo.png', alt: 'Morrisons' },
+];
+---
+
+<BaseLayout
+  title="About | Redmoor Consulting"
+  description="Learn how Redmoor Consulting combines software engineering, AI and practical delivery experience to create lasting business value."
+>
+  <div class="min-h-screen bg-white text-ink">
+    <SiteHeader />
+
+    <main>
+      <section
+        class="relative min-h-[650px] bg-ivory bg-[linear-gradient(90deg,rgba(248,245,238,0.98)_0%,rgba(248,245,238,0.94)_35%,rgba(248,245,238,0)_62%),url('/assets/about-page-hero-bg.jpg')] bg-cover bg-center bg-no-repeat max-md:min-h-[760px] max-md:bg-[linear-gradient(180deg,rgba(248,245,238,0.98)_0%,rgba(248,245,238,0.94)_50%,rgba(248,245,238,0.08)_78%),url('/assets/about-page-hero-bg-mobile.jpg')] max-md:bg-[position:center,bottom_center]"
+        aria-labelledby="about-title"
+      >
+        <div class="mx-auto flex min-h-[650px] w-[min(calc(100%-3rem),1420px)] items-center py-[clamp(5rem,9vw,8rem)] max-md:min-h-[760px] max-md:w-[min(calc(100%-2rem),1420px)] max-md:items-start max-md:pt-16">
+          <div class="w-[min(49%,720px)] max-md:w-full max-md:max-w-[650px]">
+            <p class="mb-5 text-xs font-bold tracking-[0.17em] text-forest uppercase">About Redmoor</p>
+            <h1 class="mb-7 font-heading text-[clamp(3.5rem,5.5vw,5.3rem)] leading-[0.94] font-semibold text-forest max-md:text-[clamp(3rem,11vw,4.5rem)]" id="about-title">
+              Building practical technology solutions that drive real business outcomes.
+            </h1>
+            <p class="mb-0 max-w-[660px] text-[1.05rem] leading-[1.75] text-ink">
+              I help organisations design and build software and AI solutions that are secure,
+              reliable and built for real-world use. From intelligent systems to intuitive user
+              experiences, I focus on delivering value that lasts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-[clamp(5.5rem,10vw,8.5rem)]" aria-label="My story and approach">
+        <div class="mx-auto grid w-[min(calc(100%-3rem),1420px)] grid-cols-2 gap-[clamp(4rem,8vw,8rem)] max-md:w-[min(calc(100%-2rem),1420px)] max-md:grid-cols-1 max-md:gap-14">
+          <article class="pr-[clamp(1rem,4vw,4rem)] max-md:pr-0">
+            <h2 class="mb-8 font-heading text-[clamp(2.2rem,3.6vw,3rem)] leading-none font-semibold text-forest">My story</h2>
+            <div class="space-y-6 text-[1.02rem] leading-[1.75] text-ink">
+              <p>My journey started in frontend engineering, building reliable platforms in complex, regulated environments.</p>
+              <p>Over the years, I’ve worked across industries and organisations of all sizes — from fintech and media to retail, automotive and enterprise software.</p>
+              <p>Today, I combine that experience with modern AI infrastructure to help organisations unlock the power of AI in a practical, secure and responsible way.</p>
+            </div>
+          </article>
+          <article class="border-l border-line pl-[clamp(4rem,8vw,8rem)] max-md:border-l-0 max-md:border-t max-md:pt-14 max-md:pl-0">
+            <h2 class="mb-8 font-heading text-[clamp(2.2rem,3.6vw,3rem)] leading-none font-semibold text-forest">My approach</h2>
+            <div class="space-y-6 text-[1.02rem] leading-[1.75] text-ink">
+              <p>I focus on solutions that solve real problems and integrate seamlessly with existing systems and teams.</p>
+              <p>From retrieval pipelines to user interfaces, I bridge the gap between backend intelligence and frontend usability — with governance, observability and operational safeguards built in from the start.</p>
+              <p>I believe in clear communication, evidence-based decisions and delivering value iteratively.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-ivory py-[clamp(5.5rem,10vw,8.5rem)]" aria-labelledby="expertise-title">
+        <div class="mx-auto w-[min(calc(100%-3rem),1420px)] max-md:w-[min(calc(100%-2rem),1420px)]">
+          <header class="mx-auto mb-[clamp(3.5rem,6vw,5rem)] max-w-[980px] text-center">
+            <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">What I focus on</p>
+            <h2 class="font-heading text-[clamp(2.5rem,4.4vw,4rem)] leading-[1.02] font-semibold text-forest" id="expertise-title">
+              End-to-end expertise across AI, software and delivery
+            </h2>
+          </header>
+          <div class="grid grid-cols-5 max-[1100px]:grid-cols-2 max-[1100px]:gap-y-14 max-[620px]:grid-cols-1">
+            {expertise.map((item, index) => (
+              <article class:list={['border-r border-line px-[clamp(1.2rem,2.4vw,2.5rem)] text-center max-[1100px]:border-r-0', index === 0 && 'pl-0 max-[1100px]:px-8 max-[620px]:px-0', index === expertise.length - 1 && 'border-r-0 pr-0 max-[1100px]:px-8 max-[620px]:px-0']}>
+                <i class={`${item.icon} mb-7 text-[2.7rem] text-forest`} aria-hidden="true"></i>
+                <h3 class="mx-auto mb-5 max-w-[230px] font-heading text-[1.45rem] leading-[1.15] font-semibold text-forest">{item.title}</h3>
+                <p class="mx-auto mb-0 max-w-[245px] text-[0.9rem] leading-[1.7] text-muted">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-[clamp(5.5rem,10vw,8.5rem)]" aria-labelledby="drives-title">
+        <div class="mx-auto grid w-[min(calc(100%-3rem),1420px)] grid-cols-[1.05fr_0.95fr] items-center gap-[clamp(4rem,10vw,10rem)] max-md:w-[min(calc(100%-2rem),1420px)] max-md:grid-cols-1 max-md:gap-14">
+          <div>
+            <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">What drives me</p>
+            <h2 class="mb-5 max-w-[720px] font-heading text-[clamp(2.7rem,4.6vw,4.2rem)] leading-[0.98] font-semibold text-forest" id="drives-title">
+              Bridging the gap between technology and impact.
+            </h2>
+            <p class="mb-0 max-w-[670px] text-[1.04rem] leading-[1.75] text-ink">
+              I’m passionate about connecting the dots between AI systems and real-world product
+              delivery — ensuring solutions are not only powerful under the hood, but also
+              practical, trusted and adopted by people.
+            </p>
+          </div>
+          <blockquote class="m-0 text-center font-heading text-[clamp(2.4rem,4.2vw,4rem)] leading-[1.15] font-semibold italic text-[#8b895f]">
+            “Good technology is invisible.<br />It just helps people do great work.”
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="border-t border-line bg-ivory py-[clamp(5.5rem,10vw,8.5rem)]" aria-labelledby="brands-title">
+        <div class="mx-auto w-[min(calc(100%-3rem),1420px)] max-md:w-[min(calc(100%-2rem),1420px)]">
+          <p class="mb-4 text-xs font-bold tracking-[0.17em] text-forest uppercase">Experience across industries</p>
+          <h2 class="mb-[clamp(3rem,5vw,4.5rem)] font-heading text-[clamp(2.7rem,4.5vw,4rem)] leading-none font-semibold text-forest" id="brands-title">Trusted by leading brands</h2>
+          <div class="flex flex-wrap items-center justify-between gap-x-[clamp(2rem,5vw,5rem)] gap-y-10 max-md:justify-start" aria-label="Client experience">
+            {clientLogos.map((logo) => (
+              <img class="h-12 w-auto max-w-[190px] object-contain opacity-60 mix-blend-multiply grayscale max-[520px]:h-9 max-[520px]:max-w-[135px]" src={logo.src} alt={logo.alt} />
+            ))}
+          </div>
+          <p class="mt-[clamp(3rem,5vw,4.5rem)] mb-0 max-w-[900px] text-[0.95rem] leading-[1.75] text-muted">
+            I’ve delivered solutions across regulated and large-scale environments, helping
+            organisations improve customer experiences, streamline operations and achieve
+            measurable results.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <SiteFooter />
+  </div>
+</BaseLayout>
