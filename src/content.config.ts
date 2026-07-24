@@ -31,6 +31,8 @@ const work = defineCollection({
           'brush',
           'network',
           'person',
+          'calendar',
+          'globe',
         ]),
       }),
     ),
