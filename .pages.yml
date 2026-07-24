@@ -124,4 +124,6 @@ content:
                 - { name: brush, label: Brush }
                 - { name: network, label: Network }
                 - { name: person, label: Person }
+                - { name: calendar, label: Calendar }
+                - { name: globe, label: Globe }
       - { name: body, label: Summary, type: rich-text, required: true }
